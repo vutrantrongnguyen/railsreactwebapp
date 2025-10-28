@@ -94,3 +94,18 @@ Created database 'myapp_development'
 
 
 thì bạn đã cài thành công 🎉
+fix sai ruby version 
+ thêm vào file ~/.zshrc 
+ source ~/.zshrc
+ rbenv global 3.3.4
+ rbenv rehash
+ ruby -v
+
+fix khong ket noi duoc voi postgresql
+ brew install postgresql 
+ brew services start postgresql
+ initdb --locale=C -E UTF-8 /usr/local/var/postgresql@14
+ brew services restart postgresql 
+ rails db:create
+ rails db:migrate
+ 
